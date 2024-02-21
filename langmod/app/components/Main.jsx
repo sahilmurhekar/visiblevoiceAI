@@ -45,24 +45,24 @@ const Main = () => {
                         <p>At VisibleVoice.ai, we are passionate about revolutionizing communication accessibility through innovative technology. Our mission is to break down barriers and empower individuals to express themselves freely, regardless of their communication abilities.
                         </p>
                     </div>
-                    <div class="right">
-            <h3>OUR VISI<span class='pri'>ON</span></h3>
+                    <div className="right">
+            <h3>OUR VISI<span className='pri'>ON</span></h3>
             <p>We envision a world where communication knows no bounds, where every voice is heard, and every gesture is understood. Through cutting-edge advancements in artificial intelligence and machine learning, we strive to make this vision a reality.
             </p>
         </div>
-        <div class="left">
+        <div className="left">
             <h3><span class="pri">WHAT </span>WE DO?
             </h3>
             <p>VisibleVoice.ai is a pioneering platform that leverages the power of sign language recognition to bridge the gap between the deaf and hearing communities. Our state-of-the-art sign language predictor records sign gestures in real-time and translates them into voice and text, enabling seamless communication for everyone.
             </p>
         </div>
-        <div class="right">
+        <div className="right">
             <h3>OUR <span class="pri">COMMIT</span>MENT</h3>
             <p>We are committed to pushing the boundaries of technology to create inclusive solutions that enhance accessibility and foster understanding. By harnessing the potential of AI, we aim to empower individuals with diverse communication needs and promote inclusivity on a global scale.
             </p>
         </div>
-        <div class="left">
-            <h3>JO<span class="pri">IN </span>US!
+        <div className="left">
+            <h3>JO<span className="pri">IN </span>US!
             </h3>
             <p>Join us on our journey to redefine communication and make the world a more inclusive place for all. Together, we can break down barriers and amplify voices - because every voice deserves to be visible.</p>
         </div>
