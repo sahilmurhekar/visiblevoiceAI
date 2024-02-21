@@ -1,9 +1,36 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { initFirebase } from '../firebase/firebase';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import {useAuthState} from "react-firebase-hooks/auth"
+
 const LoginPage = () => {
     const router = useRouter();
 
+    initFirebase();
+    const provider = new GoogleAuthProvider();
+    const auth = getAuth();
+    const [user, loading] = useAuthState(auth);
     const [passwordVisible, setPasswordVisible] = useState(false);
+
+    if (loading) {
+        return <div>Loading.....</div>
+    }
+    if (user) {
+        router.push("/dashboard")
+        return <div> Welcome {user.displayName}</div>
+    }
+
+    const signIn = async () => {
+        const result = await signInWithPopup(auth, provider)
+        console.log(result.user)
+    }
+
+
+
+
+
+
 
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
@@ -69,7 +96,7 @@ const LoginPage = () => {
                                 </a>
                             </center>
                             <center>
-                                <h3 style={{ fontSize: '15px' }}>CONTINUE WITH <span className="pri">GOOGLE</span></h3>
+                                <h3 style={{ fontSize: '15px' }}>CONTINUE WITH <button onClick={signIn} className="pri">GOOGLE</button></h3>
                             </center>
                             <br />
                             <center>
