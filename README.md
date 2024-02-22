@@ -25,3 +25,5 @@ MediaPipe: Provides pre-trained hand pose estimation models for accurate landmar
 Machine Learning:
 TensorFlow, Scikit-Learn: Potential libraries for training and deploying the sign language recognition model.
 Pickle: Used for saving and loading trained models.
+We also have made a voice to image model using whisper api and ipython
+
