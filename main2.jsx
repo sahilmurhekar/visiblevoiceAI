@@ -1,3 +1,13 @@
+import React from 'react';
+import "../styles/navbar.css"
+import { useRouter } from 'next/navigation'
+const Main = () => {
+    const router = useRouter();
+
+    const handleGetStarted = () => {
+        router.push('/login');
+    };
+    return (
 <main>
       <section id="home">
         <div className="imgs1">
@@ -97,3 +107,7 @@
         </div>
       </section>
     </main>
+);
+);
+
+export default Main;
