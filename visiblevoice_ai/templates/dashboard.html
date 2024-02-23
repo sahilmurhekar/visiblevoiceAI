@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <script>
+        cam_div = document.getElementsByClassName("cam");
+        cam.style.display = "None";
+
+        
+    </script>
+
+    <main>
+        <div class="test">
+        <div class="guide">
+            <h3><span class="pri">GUIDE</span>LINES:</h3>
+            <div class="lines">
+                <span>1. Visibility: </span>Keep hands visible throughout.<br>
+                <span>2. Start Video: </span>Begin Recording.<br>
+                <span>3. Sign Language: </span>Perform gestures with visible hands.<br>
+                <span>4. Stop Video: </span>End recording.<br>
+                <span>5. Convert: </span>Click "Convert" for translation.<br>
+                <span>6. Listen for Voice: </span>Tap "Listen for Voice" for audio translation.
+            </div>
+        </div>
+        <!-- <div class="cam">
+
+        </div> -->
+        <div class="testbtn">
+            <a href="{% url 'sign_video' %}"><button class="btn" id="start-btn" style="padding: 10px 30px;">START</button></a>
+            {% if messages %}
+                {% for message in messages %}
+                    <a href="{% url 'stop' %}"><button class="btn" id="stop" style="padding: 10px 30px;background: linear-gradient(135deg,red,black); animation: none;" accesskey="q">STOP</button></a>
+                {% endfor %}
+            {% endif %}
+            <a href="{% url 'sign_sen' %}"><button class="btn" id="convert-btn" style="padding: 10px 20px;">CONVERT</button></a>
+        </div>
+        <div style="color: white">
+            {% if messages %}
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            {% endif %}
+        </div>
+        </div>
+        <div class="result">
+            <h3><span class="pri">RE</span>SULT:</h3><br>
+            <p>Join us on our journey to redefine communication and make the world a more inclusive place for all. Together, we can braek down barriers and amplify voices - because every voice asserves to be visible.</p><br><br>
+            <a href="/sign_audio"><button class="btn" style="padding: 10px 30px;">LISTEN</button></a>
+        </div>
+        <div>
+            {% if messages %}
+                {% for message in messages %}
+                <audio controls>
+                    <source src="../output.mp3" type="audio/mpeg">
+                </audio>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </main>
+
+    {% endblock body %}
