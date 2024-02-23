@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <script>
+        cam_div = document.getElementsByClassName("cam");
+        cam.style.display = "None";
+
+        
+    </script>
+
+    <main>
+        <div class="test">
+        <div class="guide">
+            <h3><span class="pri">GUIDE</span>LINES:</h3>
+            <div class="lines">
+                <span>1. Visibility: </span>Keep hands visible throughout.<br>
+                <span>2. Start Video: </span>Begin Recording.<br>
+                <span>3. Sign Language: </span>Perform gestures with visible hands.<br>
+                <span>4. Stop Video: </span>End recording.<br>
+                <span>5. Convert: </span>Click "Convert" for translation.<br>
+                <span>6. Listen for Voice: </span>Tap "Listen for Voice" for audio translation.
+            </div>
+        </div>
+        <div class="testbtn">
+            <a href="{% url 'sign_video' %}"><button class="btn" id="start-btn" style="padding: 10px 30px;">START</button></a>
+            <a href="{% url 'sign_sen' %}"><button class="btn" id="convert-btn" style="padding: 10px 20px;">CONVERT</button></a>
+        </div>
+        </div>
+        <div class="result">
+            <h3><span class="pri">RE</span>SULT:</h3><br>
+            <p>{% if messages %}
+                {% for message in messages %}
+                    <div>{{ message }}</div><br>
+                    <audio controls id="audio">
+                        <source src="../static/output.mp3" type="audio/mpeg">
+                    </audio>
+                {% endfor %}
+            {% endif %}</p><br><br>
+        </div>
+    </main>
+
+    {% endblock body %}
