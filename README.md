@@ -61,7 +61,7 @@ pip install -r requirements.txt
 4. Run the Django development server:
 python manage.py runserver
 
-#How to use
+# How to use
 
 Pefer WORKFLOW.png and SIGNS.png
 
