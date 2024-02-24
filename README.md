@@ -63,7 +63,7 @@ python manage.py runserver
 
 # How to use
 
-Pefer WORKFLOW.png and SIGNS.png
+Pefer WORKFLOW.png and SIGNS.jpg
 
 
 
