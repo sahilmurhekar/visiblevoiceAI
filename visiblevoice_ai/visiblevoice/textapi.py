@@ -3,7 +3,7 @@ from clarifai_grpc.grpc.api import resources_pb2, service_pb2, service_pb2_grpc
 from clarifai_grpc.grpc.api.status import status_code_pb2
 
 def sign_text():
-    PAT = 'a2956ea415504be29cc5cf4a1d57c55b'
+    PAT = 'YOUR_PAT_KEY'
     USER_ID = 'openai'
     APP_ID = 'chat-completion'
     MODEL_ID = 'GPT-4'
