@@ -50,7 +50,7 @@ We also have made a voice to image model using whisper api and ipython
 To run the project locally, follow these steps:
 
 1. Clone the repository:
-git clone https://github.com/your-username/visiblevoice.ai.git
+git clone https://github.com/sahilmurhekar/visiblevoice.ai.git
 
 2. Navigate to the project:
 cd visiblevoice.ai
